@@ -24,14 +24,13 @@
     .tabs {
       display: flex;
       justify-content: center;
-      gap: 12px;
       padding-top: 25px;
     }
 
     .tab {
       padding: 12px 18px;
       border-radius: 10px;
-      background: #121826;
+      background: transparent;
       color: #e5e7eb;
       font-weight: 600;
       display: flex;
@@ -42,16 +41,16 @@
     }
 
     .tab i {
-      color: #facc15; /* жёлтый ключ */
+      color: #ffffff; /* белая иконка */
       font-size: 16px;
     }
 
     .tab:hover {
-      background: #1f2937;
+      background: rgba(255, 255, 255, 0.06);
     }
 
     .tab.active {
-      background: #2563eb;
+      background: rgba(255, 255, 255, 0.08);
     }
 
     /* ===== ОСНОВНОЙ БЛОК ===== */
@@ -71,16 +70,17 @@
 
     p {
       opacity: 0.7;
+      max-width: 600px;
     }
   </style>
 </head>
 <body>
 
-  <!-- ВКЛАДКИ -->
+  <!-- ВКЛАДКА -->
   <div class="tabs">
     <div class="tab active">
       <i class="fa-solid fa-key"></i>
-      Ключи
+      Бесплатные ключи
     </div>
   </div>
 
