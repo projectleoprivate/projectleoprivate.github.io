@@ -2,22 +2,27 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Project Leo Private — Ключи</title>
+<title>Komet • Keys</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet"
  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
+:root {
+  --blue: #3b82f6;
+  --blue-glow: rgba(59,130,246,0.6);
+}
+
 body {
   margin: 0;
-  background: #0b0f16;
-  color: #e5e7eb;
-  font-family: system-ui, sans-serif;
   height: 100vh;
+  background: radial-gradient(circle at top, #0b1220, #05070d);
+  font-family: system-ui, sans-serif;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .container {
@@ -27,29 +32,29 @@ body {
 }
 
 .btn {
-  width: 260px;
-  padding: 15px;
-  border-radius: 12px;
+  width: 280px;
+  padding: 16px;
+  border-radius: 14px;
   text-align: center;
-  font-size: 16px;
   font-weight: 600;
+  letter-spacing: .3px;
   text-decoration: none;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.blue {
-  border: 2px solid #2563eb;
-  color: #2563eb;
-}
-
-.blue:hover {
-  background: #2563eb;
-  color: white;
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+  background: rgba(59,130,246,0.05);
+  backdrop-filter: blur(6px);
+  transition: 0.25s;
 }
 
 .btn i {
   margin-right: 8px;
+}
+
+.btn:hover {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 0 25px var(--blue-glow);
+  transform: translateY(-1px);
 }
 </style>
 </head>
@@ -57,21 +62,21 @@ body {
 <body>
 <div class="container">
 
-  <a class="btn blue" href="#">
+  <a class="btn" href="#">
     <i class="fa-solid fa-gift"></i>
-    Бесплатные ключи
+    Free keys
   </a>
 
-  <a class="btn blue"
+  <a class="btn"
      href="https://daniilivanishchev.gumroad.com/l/keyprojectleoprivate"
      target="_blank">
     <i class="fa-solid fa-cart-shopping"></i>
-    Купить ключ
+    Buy key
   </a>
 
-  <a class="btn blue" href="activate.html">
+  <a class="btn" href="activate.html">
     <i class="fa-solid fa-key"></i>
-    Активировать ключ
+    Activate key
   </a>
 
 </div>
