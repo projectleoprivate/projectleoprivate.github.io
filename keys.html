@@ -2,59 +2,43 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Komet • Keys</title>
+<title>Project Leo — Ключи</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet"
  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
-:root {
-  --blue: #3b82f6;
-  --blue-glow: rgba(59,130,246,0.6);
-}
-
 body {
   margin: 0;
-  height: 100vh;
-  background: radial-gradient(circle at top, #0b1220, #05070d);
   font-family: system-ui, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  background: #f9fafb;
+  color: #111827;
 }
 
 .container {
+  max-width: 500px;
+  margin: 80px auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .btn {
-  width: 280px;
+  background: white;
+  border: 2px solid #2563eb;
+  color: #2563eb;
   padding: 16px;
   border-radius: 14px;
   text-align: center;
-  font-weight: 600;
-  letter-spacing: .3px;
+  font-weight: 700;
   text-decoration: none;
-  color: var(--blue);
-  border: 1.5px solid var(--blue);
-  background: rgba(59,130,246,0.05);
-  backdrop-filter: blur(6px);
-  transition: 0.25s;
-}
-
-.btn i {
-  margin-right: 8px;
+  transition: .2s;
 }
 
 .btn:hover {
-  background: var(--blue);
-  color: #fff;
-  box-shadow: 0 0 25px var(--blue-glow);
-  transform: translateY(-1px);
+  background: #2563eb;
+  color: white;
 }
 </style>
 </head>
@@ -63,20 +47,17 @@ body {
 <div class="container">
 
   <a class="btn" href="#">
-    <i class="fa-solid fa-gift"></i>
-    Free keys
+    <i class="fa-solid fa-gift"></i> Бесплатные ключи
   </a>
 
   <a class="btn"
      href="https://daniilivanishchev.gumroad.com/l/keyprojectleoprivate"
      target="_blank">
-    <i class="fa-solid fa-cart-shopping"></i>
-    Buy key
+    <i class="fa-solid fa-cart-shopping"></i> Купить ключ
   </a>
 
   <a class="btn" href="activate.html">
-    <i class="fa-solid fa-key"></i>
-    Activate key
+    <i class="fa-solid fa-key"></i> Активировать ключ
   </a>
 
 </div>
