@@ -5,15 +5,11 @@
 <title>Ключи • Project Leo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
 <style>
 :root {
   --blue: #2563eb;
   --bg: #ffffff;
   --text: #111827;
-  --border: #dbeafe;
 }
 
 * {
@@ -29,12 +25,78 @@ body {
 
 /* Центровка */
 .wrapper {
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Контейнер */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* КНОПКА — ПО УМОЛЧАНИЮ (залитая) */
+.btn {
+  padding: 16px;
+  border-radius: 14px;
+
+  background: var(--blue);
+  color: white;
+
+  border: 2px solid var(--blue);
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 0.15s;
+}
+
+/* СОСТОЯНИЕ НАЖАТИЯ */
+.btn:active,
+.btn.selected {
+  background: transparent;
+  color: var(--blue);
+}
+
+/* Небольшой эффект нажатия */
+.btn:active {
+  transform: scale(0.98);
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="container">
+
+    <a class="btn" href="#">
+      Бесплатные ключи
+    </a>
+
+    <a class="btn"
+       href="https://daniilivanishchev.gumroad.com/l/keyprojectleoprivate"
+       target="_blank">
+      Купить ключ
+    </a>
+
+    <a class="btn" href="activate.html">
+      Активировать ключ
+    </a>
+
+  </div>
+</div>
+
+</body>
+</html>
 /* Контейнер кнопок */
 .container {
   width: 100%;
