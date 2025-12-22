@@ -2,64 +2,105 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Project Leo — Ключи</title>
+<title>Ключи • Project Leo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet"
  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
+:root {
+  --blue: #2563eb;
+  --bg: #ffffff;
+  --text: #111827;
+  --border: #dbeafe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #f9fafb;
-  color: #111827;
+  background: var(--bg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
 }
 
+/* Центровка */
+.wrapper {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Контейнер кнопок */
 .container {
-  max-width: 500px;
-  margin: 80px auto;
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
+/* КНОПКИ */
 .btn {
-  background: white;
-  border: 2px solid #2563eb;
-  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
   padding: 16px;
   border-radius: 14px;
-  text-align: center;
-  font-weight: 700;
+
+  border: 2px solid var(--blue);
+  background: #f8fafc;
+  color: var(--blue);
+
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;
-  transition: .2s;
+
+  transition: 0.2s;
+}
+
+.btn i {
+  font-size: 18px;
 }
 
 .btn:hover {
-  background: #2563eb;
+  background: var(--blue);
   color: white;
 }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-  <a class="btn" href="#">
-    <i class="fa-solid fa-gift"></i> Бесплатные ключи
-  </a>
+<div class="wrapper">
+  <div class="container">
 
-  <a class="btn"
-     href="https://daniilivanishchev.gumroad.com/l/keyprojectleoprivate"
-     target="_blank">
-    <i class="fa-solid fa-cart-shopping"></i> Купить ключ
-  </a>
+    <a class="btn" href="#">
+      <i class="fa-solid fa-gift"></i>
+      Бесплатные ключи
+    </a>
 
-  <a class="btn" href="activate.html">
-    <i class="fa-solid fa-key"></i> Активировать ключ
-  </a>
+    <a class="btn"
+       href="https://daniilivanishchev.gumroad.com/l/keyprojectleoprivate"
+       target="_blank">
+      <i class="fa-solid fa-cart-shopping"></i>
+      Купить ключ
+    </a>
 
+    <a class="btn" href="activate.html">
+      <i class="fa-solid fa-key"></i>
+      Активировать ключ
+    </a>
+
+  </div>
 </div>
+
 </body>
 </html>
