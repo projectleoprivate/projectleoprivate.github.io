@@ -26,6 +26,9 @@
       gap: 14px;
       padding: 14px 16px;
       border-bottom: 1px solid #e5e7eb;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
     }
 
     .topbar i {
@@ -44,7 +47,7 @@
     }
 
     .section-title {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       color: #6b7280;
       margin-bottom: 12px;
@@ -55,13 +58,24 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e7eb;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .app img {
+    .app-icon {
       width: 64px;
       height: 64px;
       border-radius: 14px;
-      object-fit: cover;
+      background: #2563eb;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      flex-shrink: 0;
     }
 
     .app-name {
@@ -104,6 +118,11 @@
     .nav.active {
       color: #2563eb;
     }
+
+    /* чтобы контент не прятался за нижним меню */
+    .spacer {
+      height: 70px;
+    }
   </style>
 </head>
 <body>
@@ -115,4 +134,43 @@
   </div>
 
   <!-- CONTENT -->
-  <div clas
+  <div class="content">
+    <div class="section-title">DLC НА МОБИЛЬНЫЕ ИГРЫ</div>
+
+    <!-- КАРТОЧКА -->
+    <a class="app" href="keys.html">
+      <div class="app-icon">S2</div>
+      <div>
+        <div class="app-name">Standoff 2</div>
+        <div class="app-sub">Project Leo Private</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="spacer"></div>
+
+  <!-- BOTTOM NAV (ВКЛАДКИ ТЕ ЖЕ) -->
+  <div class="bottom">
+    <a class="nav active" href="index.html">
+      <i class="fa-solid fa-house"></i>
+      Главная
+    </a>
+
+    <a class="nav" href="changelog.html">
+      <i class="fa-solid fa-file"></i>
+      Новинки
+    </a>
+
+    <a class="nav" href="keys.html">
+      <i class="fa-solid fa-key"></i>
+      Ключи
+    </a>
+
+    <a class="nav" href="https://t.me/StandSk1lovik" target="_blank">
+      <i class="fa-brands fa-telegram"></i>
+      Комета
+    </a>
+  </div>
+
+</body>
+</html>
