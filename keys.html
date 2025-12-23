@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Keys • Project Leo</title>
+<title>Project Leo — Ключи</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet"
@@ -10,31 +10,126 @@
 
 <style>
 :root {
-  --blue: #2563eb;
-  --gray: #9ca3af;
-  --bg: #f9fafb;
-  --border: #e5e7eb;
+  --blue:#2563eb;
+  --gray:#9ca3af;
+  --border:#e5e7eb;
 }
 
-* { box-sizing: border-box; }
+*{box-sizing:border-box}
 
-body {
-  margin: 0;
-  background: var(--bg);
-  font-family: system-ui, sans-serif;
-  color: #111827;
+body{
+  margin:0;
+  font-family:system-ui,sans-serif;
+  background:#fff;
+  padding-top:56px;
+  padding-bottom:70px;
 }
 
-/* ===== HEADER ===== */
-header {
-  height: 56px;
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
+/* HEADER */
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:56px;
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  background:#fff;
+  z-index:10;
 }
+
+/* CONTENT */
+.container{
+  max-width:420px;
+  margin:40px auto;
+  padding:0 16px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* BUTTONS */
+.btn{
+  padding:16px;
+  border-radius:14px;
+  font-size:16px;
+  font-weight:600;
+  text-align:center;
+  text-decoration:none;
+  border:2px solid var(--blue);
+}
+
+/* filled (default) */
+.btn.primary{
+  background:var(--blue);
+  color:#fff;
+}
+
+/* outlined */
+.btn.outline{
+  background:#fff;
+  color:var(--blue);
+}
+
+/* CHANGELOG */
+.changelog{
+  margin-top:20px;
+  padding:16px;
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+
+/* BOTTOM NAV */
+.bottom{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:64px;
+  border-top:1px solid var(--border);
+  display:flex;
+  background:#fff;
+}
+
+.bottom a{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:var(--gray);
+  font-size:12px;
+}
+
+.bottom a i{
+  font-size:20px;
+}
+
+.bottom a.active{
+  color:var(--blue);
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">Project Leo</div>
+
+<div class="container">
+  <div class="btn primary">Бесплатные ключи</div>
+  <a class="btn primary"
+     href="https://daniilivanishchev.gumroad.com/l/keyprojectleoprivate"
+     target="_blank">Купить ключ</a>
+  <a class="btn outline" href="activate.html">Активировать ключ</a>
+
+  <div class="changelog">
+    <b>Changelog</b>
+    <ul>
+      <}
 
 /* ===== MAIN ===== */
 main {
