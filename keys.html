@@ -5,15 +5,13 @@
 <title>Ключи • Project Leo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
 <style>
 :root {
   --blue: #2563eb;
   --bg: #ffffff;
   --text: #111827;
   --muted: #6b7280;
+  --border: #e5e7eb;
 }
 
 * { box-sizing: border-box; }
@@ -27,149 +25,144 @@ body {
 
 /* ===== HEADER ===== */
 header {
-  height: 60px;
-  padding: 0 16px;
-  border-bottom: 1px solid #e5e7eb;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
 }
 
-.header-left {
+header .left {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.header-left i {
-  font-size: 20px;
+header .menu {
+  font-size: 22px;
 }
 
-.header-title {
+header .title {
   font-weight: 700;
 }
 
-.login {
-  border: 2px solid var(--blue);
+header .login {
   color: var(--blue);
-  padding: 6px 14px;
+  border: 2px solid var(--blue);
+  padding: 6px 12px;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
-/* ===== MAIN ===== */
-main {
-  min-height: calc(100vh - 120px);
+/* ===== CONTENT ===== */
+.main {
+  padding: 24px 16px 80px;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .container {
   width: 100%;
   max-width: 420px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 /* ===== BUTTONS ===== */
-.key-btn {
+.btn {
   padding: 16px;
   border-radius: 14px;
-  text-align: center;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
+  text-align: center;
   text-decoration: none;
-  border: 2px solid var(--blue);
-  background: var(--blue);
-  color: white;
+  cursor: pointer;
   transition: 0.2s;
 }
 
-/* hover / active */
-.key-btn:hover,
-.key-btn:active {
-  background: transparent;
+/* по умолчанию — ЗАЛИТАЯ */
+.btn.primary {
+  background: var(--blue);
+  color: white;
+  border: 2px solid var(--blue);
+}
+
+/* при нажатии / вторичная */
+.btn.primary:active,
+.btn.outline {
+  background: white;
   color: var(--blue);
+  border: 2px solid var(--blue);
 }
 
-/* ===== FOOTER ===== */
-footer {
-  height: 60px;
-  border-top: 1px solid #e5e7eb;
+/* ===== BOTTOM NAV ===== */
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  border-top: 1px solid var(--border);
+  background: white;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
-footer a {
+nav a {
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
   color: var(--muted);
   text-decoration: none;
-  font-size: 12px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 4px;
+  justify-content: center;
 }
 
-footer i {
-  font-size: 18px;
+nav a.active {
+  color: var(--blue);
+  font-weight: 600;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="header-left">
-    <i class="fa-solid fa-bars"></i>
-    <div class="header-title">Project Leo</div>
+  <div class="left">
+    <div class="menu">☰</div>
+    <div class="title">Комета</div>
   </div>
   <a class="login" href="#">Войти</a>
 </header>
 
-<!-- MAIN -->
-<main>
+<div class="main">
   <div class="container">
 
-    <a class="key-btn" href="#">
+    <a class="btn primary" href="#">
       Бесплатные ключи
     </a>
 
-    <a class="key-btn"
+    <a class="btn primary"
        href="https://daniilivanishchev.gumroad.com/l/keyprojectleoprivate"
        target="_blank">
       Купить ключ
     </a>
 
-    <a class="key-btn" href="activate.html">
+    <a class="btn primary" href="activate.html">
       Активировать ключ
     </a>
 
   </div>
-</main>
+</div>
 
-<!-- FOOTER -->
-<footer>
-  <a href="index.html">
-    <i class="fa-solid fa-house"></i>
-    Главная
-  </a>
-
-  <a href="keys.html">
-    <i class="fa-solid fa-key"></i>
-    Ключи
-  </a>
-
-  <a href="#">
-    <i class="fa-solid fa-user"></i>
-    Профиль
-  </a>
-</footer>
+<nav>
+  <a href="index.html">Главная</a>
+  <a href="keys.html" class="active">Ключи</a>
+  <a href="#">Профиль</a>
+</nav>
 
 </body>
 </html>
