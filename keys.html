@@ -5,164 +5,171 @@
 <title>Ключи • Project Leo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 <style>
 :root {
   --blue: #2563eb;
   --bg: #ffffff;
   --text: #111827;
+  --muted: #6b7280;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: var(--bg);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
   color: var(--text);
 }
 
-/* Центровка */
-.wrapper {
-  min-height: 100vh;
+/* ===== HEADER ===== */
+header {
+  height: 60px;
+  padding: 0 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-left i {
+  font-size: 20px;
+}
+
+.header-title {
+  font-weight: 700;
+}
+
+.login {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== MAIN ===== */
+main {
+  min-height: calc(100vh - 120px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Контейнер */
 .container {
   width: 100%;
   max-width: 420px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
-/* КНОПКА — ПО УМОЛЧАНИЮ (залитая) */
-.btn {
+/* ===== BUTTONS ===== */
+.key-btn {
   padding: 16px;
   border-radius: 14px;
-
-  background: var(--blue);
-  color: white;
-
-  border: 2px solid var(--blue);
-
   text-align: center;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
-
-  transition: 0.15s;
+  border: 2px solid var(--blue);
+  background: var(--blue);
+  color: white;
+  transition: 0.2s;
 }
 
-/* СОСТОЯНИЕ НАЖАТИЯ */
-.btn:active,
-.btn.selected {
+/* hover / active */
+.key-btn:hover,
+.key-btn:active {
   background: transparent;
   color: var(--blue);
 }
 
-/* Небольшой эффект нажатия */
-.btn:active {
-  transform: scale(0.98);
+/* ===== FOOTER ===== */
+footer {
+  height: 60px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-</style>
-</head>
 
-<body>
-
-<div class="wrapper">
-  <div class="container">
-
-    <a class="btn" href="#">
-      Бесплатные ключи
-    </a>
-
-    <a class="btn"
-       href="https://daniilivanishchev.gumroad.com/l/keyprojectleoprivate"
-       target="_blank">
-      Купить ключ
-    </a>
-
-    <a class="btn" href="activate.html">
-      Активировать ключ
-    </a>
-
-  </div>
-</div>
-
-</body>
-</html>
-/* Контейнер кнопок */
-.container {
-  width: 100%;
-  max-width: 420px;
-  padding: 20px;
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-}
-
-/* КНОПКИ */
-.btn {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  padding: 16px;
-  border-radius: 14px;
-
-  border: 2px solid var(--blue);
-  background: #f8fafc;
-  color: var(--blue);
-
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-
-  transition: 0.2s;
+  gap: 4px;
 }
 
-.btn i {
+footer i {
   font-size: 18px;
-}
-
-.btn:hover {
-  background: var(--blue);
-  color: white;
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<!-- HEADER -->
+<header>
+  <div class="header-left">
+    <i class="fa-solid fa-bars"></i>
+    <div class="header-title">Project Leo</div>
+  </div>
+  <a class="login" href="#">Войти</a>
+</header>
+
+<!-- MAIN -->
+<main>
   <div class="container">
 
-    <a class="btn" href="#">
-      <i class="fa-solid fa-gift"></i>
+    <a class="key-btn" href="#">
       Бесплатные ключи
     </a>
 
-    <a class="btn"
+    <a class="key-btn"
        href="https://daniilivanishchev.gumroad.com/l/keyprojectleoprivate"
        target="_blank">
-      <i class="fa-solid fa-cart-shopping"></i>
       Купить ключ
     </a>
 
-    <a class="btn" href="activate.html">
-      <i class="fa-solid fa-key"></i>
+    <a class="key-btn" href="activate.html">
       Активировать ключ
     </a>
 
   </div>
-</div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html">
+    <i class="fa-solid fa-house"></i>
+    Главная
+  </a>
+
+  <a href="keys.html">
+    <i class="fa-solid fa-key"></i>
+    Ключи
+  </a>
+
+  <a href="#">
+    <i class="fa-solid fa-user"></i>
+    Профиль
+  </a>
+</footer>
 
 </body>
 </html>
