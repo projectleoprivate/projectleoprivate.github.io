@@ -2,111 +2,43 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Активация • Project Leo</title>
+<title>Активация</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-:root {
-  --blue: #2563eb;
-  --border: #e5e7eb;
+body{font-family:system-ui;background:#fff;margin:0}
+header{
+  padding:16px;
+  border-bottom:1px solid #e5e7eb;
+  font-size:18px;
+  font-weight:600;
 }
-
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #ffffff;
+main{padding:16px}
+input{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  margin-bottom:12px;
 }
-
-header {
-  height: 56px;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  border-bottom: 1px solid var(--border);
-  font-weight: 700;
-}
-
-.main {
-  padding: 24px 16px 80px;
-  display: flex;
-  justify-content: center;
-}
-
-.box {
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-input {
-  padding: 16px;
-  border-radius: 14px;
-  border: 2px solid var(--blue);
-  font-size: 16px;
-}
-
-button {
-  padding: 16px;
-  border-radius: 14px;
-  background: var(--blue);
-  border: 2px solid var(--blue);
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-button:active {
-  background: white;
-  color: var(--blue);
-}
-
-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 56px;
-  border-top: 1px solid var(--border);
-  background: white;
-  display: flex;
-}
-
-nav a {
-  flex: 1;
-  text-align: center;
-  font-size: 13px;
-  color: #6b7280;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-nav a.active {
-  color: var(--blue);
-  font-weight: 600;
+button{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:none;
+  background:#2563eb;
+  color:#fff;
+  font-weight:600;
 }
 </style>
 </head>
 
 <body>
-
 <header>Активация ключа</header>
 
-<div class="main">
-  <div class="box">
-    <input placeholder="Введите ключ">
-    <button>Активировать</button>
-  </div>
-</div>
-
-<nav>
-  <a href="index.html">Главная</a>
-  <a href="keys.html" class="active">Ключи</a>
-  <a href="#">Профиль</a>
-</nav>
-
+<main>
+  <input placeholder="Введите ключ">
+  <button>Активировать</button>
+</main>
 </body>
 </html>
