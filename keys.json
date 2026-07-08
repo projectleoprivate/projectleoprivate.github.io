@@ -1,6 +1,3 @@
-{
-  "enabled": true,
-  "globalKey": "DEBUG_FOREVER",
-  "checkDevice": false,
-  "pasteId": "AbCd1234"
+"DEBUG_FOREVER": {
+    "enabled": true
 }
