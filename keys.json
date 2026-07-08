@@ -1,3 +1,5 @@
-"DEBUG_FOREVER": {
-    "enabled": true
-}
+{
+    "DEBUG_FOREVER":
+    {
+        "enabled": true
+    }
