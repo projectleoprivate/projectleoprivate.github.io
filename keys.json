@@ -1,5 +1,6 @@
 {
-  "keys": [
-    "PLRELEASE13",
-  ]
+  "enabled": true,
+  "globalKey": "DEBUG_FOREVER",
+  "checkDevice": false,
+  "pasteId": "AbCd1234"
 }
