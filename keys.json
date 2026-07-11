@@ -1,5 +1,5 @@
 {
     "DEBUG_FOREVER":
     {
-        "enabled": false
+        "enabled": true
     }
